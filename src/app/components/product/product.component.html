@@ -8,7 +8,8 @@
                 <div class="card-body">
 
                     <label for="text">Product-search</label>
-                    <input type="text" [(ngModel)]="onproductsearch" class="form-control my-2">
+                    <input type="text" [(ngModel)]="onproductsearchng" class="form-control my-2">
+                    <p class="btn-success w-40 px-3 border border-danger"><strong>{{onproductsearchng}}</strong></p>
                     <input type="text" (keyup)="Onproductsearch($event)" class="form-control">
                     <p class="btn-success w-40 px-3 border border-danger"><strong>{{onproductsearch}} two way
                             databinding</strong></p>

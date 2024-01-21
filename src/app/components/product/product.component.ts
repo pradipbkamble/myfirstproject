@@ -19,6 +19,7 @@ export class ProductComponent implements OnInit{
     productId:number=123
     productinfo=`<h4>Oppo Mobile</h4>`
     onproductsearch!:string
+    onproductsearchng!:string
     Cartstatusproduct:string="product is added to the cart"
     Noofproducts:number=0
     updatecartstatus(event:any){
