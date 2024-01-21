@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="bg-dark py-2 text-center text-white">{{productname}}</h3>
+                </div>
+                <div class="card-body">
+
+                    <label for="text">Product-search</label>
+                    <input type="text" [(ngModel)]="onproductsearch" class="form-control my-2">
+                    <input type="text" (keyup)="Onproductsearch($event)" class="form-control">
+                    <p class="btn-success w-40 px-3 border border-danger"><strong>{{onproductsearch}} two way
+                            databinding</strong></p>
+                    <div class="form-group">
+                        <p [innerHTML]="productinfo"></p>
+                        <input type="text" [value]="productname">
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="text-right">
+                        <button class="btn btn-primary" [disabled]="productstatus"
+                            (click)="updatecartstatus($event)">add</button>
+                        <button class="btn btn-danger mx-2" [disabled]="Noofproducts <=1"
+                            (click)="removeproduct($event)">remove</button>
+
+                        <p class="alert alert-info my-2">{{ Cartstatusproduct}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

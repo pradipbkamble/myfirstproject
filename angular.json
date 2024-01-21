@@ -28,9 +28,10 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+             "bootstrap/dist/css/bootstrap.min.css"
             ],
-            "scripts": []
+            "scripts": ["F:/project file/Angular/myfirstproject/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"]
           },
           "configurations": {
             "production": {
