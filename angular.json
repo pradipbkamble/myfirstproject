@@ -31,7 +31,7 @@
               "src/styles.scss",
              "bootstrap/dist/css/bootstrap.min.css"
             ],
-            "scripts": ["F:/project file/Angular/myfirstproject/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"]
+            "scripts": ["node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"]
           },
           "configurations": {
             "production": {
