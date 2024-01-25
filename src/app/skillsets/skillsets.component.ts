@@ -9,11 +9,14 @@ import {todopost } from '../components/const/const';
   styleUrls: ['./skillsets.component.scss']
 })
 export class SkillsetsComponent implements OnInit {
-[x: string]: any;
+
 todos:Array<Itodos> = todopost
+  
+
   constructor() { }
 
   ngOnInit(): void {
+    
   }
 
 }

@@ -28,8 +28,7 @@
             <td [ngClass]="{
                 'text-success':postss.completed,
                 'text-danger':!postss.completed
-            }">
-                {{postss.completed}} 
+            }">{{postss.completed ? 'completed':'incomplete'}}
             </td>
         </tr>
     </tbody>
