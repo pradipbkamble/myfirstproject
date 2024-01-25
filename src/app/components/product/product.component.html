@@ -32,3 +32,29 @@
         </div>
     </div>
 </div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+<!-- <p [ngClass]="{'text-white':isproductavailable, }">
+
+sfdfdghhgh
+
+
+</p> -->
+<p [ngStyle]="{backgroundColor:'green',color:'white'}"
+         
+[ngClass]="{'text-white':isproductavailable,
+'text-dark':!isproductavailable,
+'bg-primary':!isproductavailable,
+'p-4':isproductavailable}">function is run <strong>{{productId}}</strong>
+    <strong *ngIf="isproductavailable; else productnotavailable"> product is available</strong>
+    <!-- <strong *ngIf="isproductavailable===false"> product not available</strong> -->
+<ng-template #productnotavailable>
+    <strong>product is not available</strong>
+</ng-template>
+
+
+</p>
+        </div>
+    </div>
+</div>

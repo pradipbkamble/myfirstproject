@@ -1,0 +1,39 @@
+<p>skillsets works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12" >
+            
+            <table class="table table-bordered" id="maintable">
+                    <thead class="thead-dark">
+        <tr>
+            <th>
+                id
+            </th>
+            <th>title</th>
+            <th><select name="selectall" id="selectall">
+                <option name="complete" id="complete">complete</option>
+            <option name="incomplete" id="incomplete">incomplete</option>
+        <option name="all" id="all">all</option>
+            </select></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let postss of todos">
+            <td>
+                {{postss.id}}    
+            </td>
+            <td>
+                {{postss.title}} 
+            </td>
+            <td [ngClass]="{
+                'text-success':postss.completed,
+                'text-danger':!postss.completed
+            }">
+                {{postss.completed}} 
+            </td>
+        </tr>
+    </tbody>
+</table>
+        </div>
+    </div>
+</div>
