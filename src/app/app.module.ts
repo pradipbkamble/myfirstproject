@@ -6,6 +6,7 @@ import { ProductComponent } from './components/product/product.component';
 import { ProductsComponent } from './components/products/products.component';
 import { FormsModule } from '@angular/forms';
 import { SkillsetsComponent } from './skillsets/skillsets.component';
+import { TabsComponent } from './tabs/tabs.component';
 
 
 
@@ -21,6 +22,7 @@ import { SkillsetsComponent } from './skillsets/skillsets.component';
     ProductComponent,
     ProductsComponent,
     SkillsetsComponent,
+    TabsComponent,
     
 
    

@@ -1,4 +1,4 @@
-<p>skillsets works!</p>
+
 <div class="container">
     <div class="row">
         <div class="col-md-12" >
@@ -11,8 +11,8 @@
             </th>
             <th>title</th>
             <th><select name="selectall" id="selectall">
-                <option name="complete" id="complete">complete</option>
-            <option name="incomplete" id="incomplete">incomplete</option>
+                <option name="complete" >complete</option>
+            <option name="incomplete" *ngFor="let postss of todos">incomplete</option>
         <option name="all" id="all">all</option>
             </select></th>
         </tr>

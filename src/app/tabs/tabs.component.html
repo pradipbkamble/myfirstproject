@@ -1,0 +1,119 @@
+
+
+    
+    
+            <ul class="nav nav-pills text-capitalize">
+                <li class="nav-item" (click)="selectskill('javascript')"><a href="javascript:;" class="nav-link" [ngClass]="{
+                    active:tabsitems.toLocaleLowerCase().includes('javascript')
+                }">javascript</a></li>
+                <li class="nav-item" (click)="selectskill('angular')"><a href="javascript:;" class="nav-link" [ngClass]="{
+                    active:tabsitems.toLocaleLowerCase().includes('angular')}">angular</a></li>
+                <li class="nav-item" (click)="selectskill('typescript')"><a href="javascript:;" class="nav-link" [ngClass]="{
+                    active:tabsitems.toLocaleLowerCase().includes('typescript')}">typescript</a></li>
+                <li class="nav-item" (click)="selectskill('node')"><a href="javascript:;" class="nav-link" [ngClass]="{
+                    active:tabsitems.toLocaleLowerCase().includes('node')}">node</a></li>
+                <li class="nav-item" (click)="selectskill('css')"><a href="javascript:;" class="nav-link" [ngClass]="{
+                    active:tabsitems.toLocaleLowerCase().includes('css')}">css</a></li>
+                <li class="nav-item" (click)="selectskill('sass')"><a href="javascript:;" class="nav-link" [ngClass]="{
+                    active:tabsitems.toLocaleLowerCase().includes('sass')}">scss</a></li>
+            </ul>
+            <div class="tab-body">
+                <div class="card"*ngIf="tabsitems.toLocaleLowerCase().includes('javascript')">
+                    <div class="card-body">
+                        <p><strong class="text-capitalize p-2">javasript</strong> JavaScript, often abbreviated as JS,
+                             is a programming language and core technology of the World Wide Web, 
+                             alongside HTML and CSS. As of 2023, 98.7% of websites use JavaScript on the
+                              client side for webpage behavior, often incorporating third-party libraries</p>
+                    </div>
+                    </div>
+                    <div class="card"*ngIf="tabsitems.toLocaleLowerCase().includes('angular')">
+                    <div class="card-body">
+                        <p><strong class="text-capitalize p-2">angular</strong> Angular is a TypeScript-based, free and open-source single-page web
+                             application framework led by the Angular Team at Google and by a community of individuals and
+                              corporations.
+                             Angular is a complete rewrite from the same team that built AngularJS.</p>
+                    </div>
+                </div>
+                <div class="card"*ngIf="tabsitems.toLocaleLowerCase().includes('typescript')">
+                    <div class="card-body">
+                        <p><strong class="text-capitalize p-2">typescript</strong> TypeScript is a free and open-source high-level programming language
+                             developed by Microsoft that adds static typing with optional type annotations to JavaScript.
+                              It is designed for the development of large applications and transpiles to JavaScript.</p>
+                    </div>
+                </div>
+                <div class="card"*ngIf="tabsitems.toLocaleLowerCase().includes('node')">
+                    <div class="card-body">
+                        <p><strong class="text-capitalize p-2">node</strong> Node.js is a cross-platform, open-source JavaScript runtime
+                             environment that can run on Windows, Linux, Unix, macOS, and more. Node.
+                             js runs on the V8 JavaScript engine, and executes JavaScript code outside a 
+                             web browser. Node.js lets developers use JavaScript to write command line tools and 
+                             for server-side scripting.</p>
+                    </div> 
+                </div>
+                <div class="card"*ngIf="tabsitems.toLocaleLowerCase().includes('css')">
+                    <div class="card-body">
+                        <p><strong class="text-capitalize p-2">css</strong> Cascading Style Sheets is a style sheet language used for 
+                            specifying the presentation and styling of a document written in a markup language 
+                            such as HTML or XML. CSS is a cornerstone technology of the World Wide Web, alongside HTML
+                             and JavaScript</p>
+                    </div>
+                </div>
+                <div class="card"*ngIf="tabsitems.toLocaleLowerCase().includes('sass')">
+                    <div class="card-body">
+                        <p><strong class="text-capitalize p-2">scss</strong> Sass is a preprocessor scripting language that is 
+                            interpreted or compiled into Cascading Style Sheets. SassScript is the 
+                            scripting language itself. Sass consists of two syntaxes. The original syntax, 
+                            called "the indented syntax," uses a syntax similar to Haml.</p>
+                    </div>
+                </div>
+                </div>
+
+        
+    
+<ul class="nav nav-pills my-4">
+    <!-- <li class="nav-item" *ngFor="let app of apparry" (click)="selectskill(app.Aname)"> -->
+        <li class="nav-item" *ngFor="let app of apparry"(click)="tabsitems=app.Aname">    <!--does not need click eventfunction-->
+        <a href="javascript:;" class="nav-link" [ngClass]="{
+            active:tabsitems.toLocaleLowerCase().includes(app.Aname)
+        }"> {{app.Aname}}</a>
+    </li>
+</ul>
+<div class="body-content">
+    <ng-container *ngFor="let app of apparry">
+        <div class="card" *ngIf="tabsitems.toLocaleLowerCase().includes(app.Aname)">
+            <div class="card-body" [innerHTML]="app.content">
+               <!-- {{app.content}}  -->
+            </div>
+        </div>
+    </ng-container>
+</div>
+
+
+
+
+
+
+<h1 class="bg-success text-center text-capitalize mt-4 mb-0 p-4">with ngSwitch</h1>
+
+<ul class="nav nav-pills my-4">
+    <!-- <li class="nav-item" *ngFor="let app of apparry" (click)="selectskill(app.Aname)"> -->
+        <li class="nav-item" *ngFor="let app of apparry"(click)="tabsitems=app.Aname">    <!--does not need click eventfunction-->
+        <a href="javascript:;" class="nav-link" [ngClass]="{
+            active:tabsitems.toLocaleLowerCase().includes(app.Aname)
+        }"> {{app.Aname}}</a>
+    </li>
+</ul>
+<div class="body-content" [ngSwitch]="tabsitems.toLocaleLowerCase().trim()">
+    <ng-container *ngFor="let app of apparry">
+        <div class="card" *ngSwitchCase="app.Aname" >
+            <div class="card-body" [innerHTML]="app.content">
+               <!-- {{app.content}}  -->
+            </div>
+        </div>
+    </ng-container>
+</div>
+
+
+
+
+

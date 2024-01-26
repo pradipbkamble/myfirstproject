@@ -9,12 +9,15 @@ import { Component, OnInit } from "@angular/core"
 
 export class ProductComponent implements OnInit{
 [x: string]: any
-    // ngOnInit(): void {
-    //     setTimeout(() => {
-    //         this.productstatus=false;
-    //     },3000);
+    ngOnInit(): void {
+        setTimeout(() => {
+            this.productstatus=false;
+        },3000);
+        console.log("is product is in it");
+        this.isproductavailable=Math.random() >= 0.6 ? true :false
+        console.log( this.isproductavailable)
 
-    // }
+    }
    
     productstatus:boolean=true
     productname:string="Electronic Devices"
@@ -26,11 +29,7 @@ export class ProductComponent implements OnInit{
     Noofproducts:number=0
     isproductavailable!:boolean;
 
-    ngOnInit():void{
-        console.log("is product is in it");
-        this.isproductavailable=Math.random() >= 0.6 ? true :false
-        console.log( this.isproductavailable)
-    }
+    
 
 
     updatecartstatus(event:any){

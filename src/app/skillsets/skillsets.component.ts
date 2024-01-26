@@ -9,7 +9,7 @@ import {todopost } from '../components/const/const';
   styleUrls: ['./skillsets.component.scss']
 })
 export class SkillsetsComponent implements OnInit {
-
+completes:string="complete"
 todos:Array<Itodos> = todopost
   
 
